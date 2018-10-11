@@ -37,7 +37,8 @@ namespace ClaseTres
 
         private void ViewCell_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ProfilePage());
+                        
+            Navigation.PushAsync(new ProfilePage((Comida)((ViewCell)sender).BindingContext));
         }
     }
 }

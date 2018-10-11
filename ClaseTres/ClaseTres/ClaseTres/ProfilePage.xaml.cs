@@ -18,10 +18,18 @@ namespace ClaseTres
 		{
 			InitializeComponent ();
 		}
+        private void InnitValues()
+        {
+            Title = _comida.Nombre;
+            ImImage.Source = _comida.ImageUrl;
+            LabDescription.Text = _comida.Descripcion;
+            LabDetails.Text = _comida.Details;
+        }
         public ProfilePage(Comida comida)
         {
             InitializeComponent();
             _comida = comida;
+            InnitValues();
         }
     }
 }
